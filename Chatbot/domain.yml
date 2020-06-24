@@ -1,0 +1,32 @@
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - enter_phone_number
+entities:
+  - phone_number
+
+slots:
+  phone_number:
+    type: text
+
+
+actions:
+  - action_customer_info
+responses:
+  utter_greet:
+  - text: "Hey! I am CountryDelight bot"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, owned by CountryDelight."
+
+  utter_ask_phone_number:
+  - text: "Can you verify phone number?"
+  utter_how_may_i_help_you:
+    - text: "How may i help you?"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
